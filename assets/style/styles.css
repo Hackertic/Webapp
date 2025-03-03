@@ -1,1 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.tap-container {
+    margin: 20px;
+    position: relative;
+}
+
+.tap-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#effects-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.tap-effect {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    opacity: 1;
+    animation: tapAnimation 1s ease-out forwards;
+}
+
+@keyframes tapAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+.task-container, .referral-container {
+    margin: 20px;
+}
+
+.task, .referral {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.task img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: #007bff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.bottom-nav .active {
+    font-weight: bold;
+}
